@@ -1,0 +1,63 @@
+Calculating a tip;
+
+SET total_price equals zero
+IF tips accepted
+  SET base_price equal price_on_receipt
+  SET tip equal base_price times fifteen percent.
+  SET total_price equal base_price plus tip
+else
+  SET total_price equal price_on_receipt
+end
+pay total_price
+
+Determining what to wear;
+SET awake equal TRUE
+roll out of bed
+SET shirt_slot equal empty
+SET pants_slot equal empty
+SET socks_slot equal empty
+SET first_pass equal clothes_on_the_floor.
+
+FOR clothes_on_the_floor x
+  IF x not disgusting
+    IF x is a shirt
+      IF shirt_slot is empty
+        shirt_slot equals x
+      END
+    END
+    IF x is a pants
+      IF pants_slot is empty
+        pants_slot equals x
+      END
+    END
+    IF x is a socks
+      IF socks_slot is empty
+        socks_slot equals x
+      END
+    END
+  ELSE
+    x into clothes_basket
+  END
+END
+IF shirt_slot is empty
+  set shirt_slot equal shirt_from_closet
+END
+IF pants_slot is empty
+  set shirt_slot equal shirt_from_closet
+END
+IF socks_slot is empty
+  set socks_slot equal socks_from_closet
+END
+
+
+Making a bowl of cerial
+  if milk == null || milk != "fresh"
+    return "No Cerial"
+  end
+  SET bowl = cabinets[bowls].pop
+  SET cerial = cabinets[cerials][not_healthy].pop
+  certial.pour(bowl)
+  milk.pour(bowl)
+  bowl.place_on_table.
+  SET spoon = utensils[spoon].pop
+END

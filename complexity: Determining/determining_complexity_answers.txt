@@ -1,0 +1,143 @@
+What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+goodbye_world.rb
+
+    def goodbye_world(n)
+     puts "Goodbye World! #{n}"
+    end
+
+    O(1)
+    This prints the string "Goodbye World!" + the string n. While technically, who big n is does matter, we're pretending it doesn't
+    because it's simplier and unless n becomes stupidly big, it makes little difference. As such, this algorithm takes a fixed amount
+    of time to finish.
+
+What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+  find_largest.rb
+  def find_largest(collection)
+   largest = collection[0]
+   collection.length.times do |i|
+     if collection[i] >= largest
+       largest = collection[i]
+     end
+   end
+   largest
+  end
+
+  O(n)
+  This takes a linear amount of time, with big O equal to the size of the collection being examined.
+
+What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+  find_largest_2D_array.rb
+  def find_largest(collection)
+   largest = collection[0][0]
+   collection.length.times do |i|
+     subcollection = collection[i]
+     subcollection.length.times do |j|
+       if subcollection[j] >= largest
+         largest = subcollection[j]
+       end
+     end
+   end
+   largest
+  end
+  
+  O(n)
+  Since the size of the subcollections and the size of the collection are in no way related
+  this is not n^2. Rather, the actual size of the collection is the sum on the sizes of all
+  the sub collections. As the time to iterate over any subconnection is the size of that sub-
+  collection, the final size time is n.
+
+What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+  numbers_recurive.rb
+  def numbers(n)
+   if (n == 0)
+     return 0
+   elsif (n == 1)
+     return 1
+   else
+     return numbers(n-1) + numbers(n-2)
+   end
+  end
+  
+  O(n log n)
+  
+
+What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+  numbers_iterative.rb
+  def iterative(n)
+   num1 = 0
+   num2 = 1
+  
+   i = 0
+   while i < n-1
+     tmp = num1 + num2
+     num1 = num2
+     num2 = tmp
+     i+=1
+   end
+  
+   num2
+  end
+  
+  O(n)
+
+What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
+
+  sort.rb
+  def sort(collection, from=0, to=nil)
+   if to == nil
+     # Sort the whole collection, by default
+     to = collection.count - 1
+   end
+  
+   if from >= to
+     # Done sorting
+     return
+   end
+  
+   # Take a pivot value, at the far left
+   pivot = collection[from]
+  
+   # Min and Max pointers
+   min = from
+   max = to
+  
+   # Current free slot
+   free = min
+  
+   while min < max
+     if free == min # Evaluate collection[max]
+       if collection[max] <= pivot # Smaller than pivot, must move
+         collection[free] = collection[max]
+         min += 1
+         free = max
+       else
+         max -= 1
+       end
+     elsif free == max # Evaluate collection[min]
+       if collection[min] >= pivot # Bigger than pivot, must move
+         collection[free] = collection[min]
+         max -= 1
+         free = min
+       else
+         min += 1
+       end
+     else
+       raise "Inconsistent state"
+     end
+   end
+  
+   collection[free] = pivot
+  
+   sort collection, from, free - 1
+   sort collection, free + 1, to
+  
+   collection
+  end
+  
+  O(n2)
+  In the worst case senario, the pivot will always be opposite the ideal placement, making
+  it it iterate over the entire set a number of times equal the entire set.

@@ -1,0 +1,58 @@
+Describe an analogy for relating an algorithm that has efficiency O(1) and another algorithm that has O(2n). 
+
+  An algorithm that has efficiency O(1) is like a tram line that always get to a given destination in a certain amount of time.
+  An algorithm that has efficiency O(2n) is like Lyft Line. The time taken grows with the number of detours to pick up other passengers.
+
+In plain English, what is the best case scenario for binary search?
+
+  When what you're looking for is in the exact middle of the searched data, so that
+  you find it on the first iteration of the search.
+
+In plain English, what is the worst-case scenario for binary search?
+
+  When what you're searching for is either the maximum or minimum extreme of the 
+  searched data, so that it ends up being in literally the last place you would look.
+
+In plain English, what is the bounded-case scenario for binary search?
+
+  Anything that isn't the extremes or the middle. It will half the number of possibilities with
+  each iteration, until it lands on it.
+
+Create a graph using the data below. Here's a CSV with the values you'll need.
+
+  Graph of 2^n
+  https://docs.google.com/spreadsheets/d/e/2PACX-1vRV6bN6q4zxtj3u06Oaf3KJUw-UPcSmSxq52wUgVVDWP--r2_I0ksvtwNAU0suTQErXHIv4e5n2xEP0/pubhtml
+
+What is the limit of the function above as n approaches infinity?
+
+  Infinity.
+
+What is the Big-O of an algorithm that has the data points above?
+
+  O(2^n), Big O of Exponential Time.
+
+Write a Ruby method that takes a number n. This method must print the worst-case number of iterations for linear search to find an item in collections of size one to n. Use it to generate a table of worst-case iterations of collections up to size 10.
+
+  def print_time(n)
+    for t in 1..n
+      puts t
+    end
+  end
+  print_time(10)
+
+Create a graph from the output using Google Sheets or other graphing software. Analyze the graph and denote its Big-O somewhere on the graph.
+
+  O(n) https://docs.google.com/spreadsheets/d/e/2PACX-1vQix0WY36g4hGgvJvf132wvePHY8yxjzOACyU2CrGMggEr7Ns0BKxM11szv3PdTb7xz4-ZzBP-9Rp5M/pubhtml
+
+
+What is the Big-O of binary search?
+
+  O(log n)
+
+What is the Big-Ω of binary search?
+
+  Ω(1)
+
+What is the Big-Ө of binary search?
+
+  Ө(log n)

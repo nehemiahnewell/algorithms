@@ -1,0 +1,4 @@
+Improving_complexity_version_one's big O  is set to n^2, as how the array is sorted is insertion sort.
+
+Improving_complexity_version_two is also technically n^2, but in most cases it will be n log n, as it's
+using Quick Sort.

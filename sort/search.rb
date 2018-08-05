@@ -82,9 +82,6 @@ def heapify(array, i, ending)
   heapify(array, children, ending)
 end
 
-
-
-
 # Bucket Sort
 
 def bucket_sort(array, size = 3)

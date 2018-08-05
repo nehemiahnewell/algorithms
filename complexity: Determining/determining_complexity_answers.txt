@@ -140,4 +140,4 @@ What's the Big-O of the following algorithm? Submit your work and reasoning with
   
   O(n2)
   In the worst case senario, the pivot will always be opposite the ideal placement, making
-  it it iterate over the entire set a number of times equal the entire set.
+  it it iterate over the entire set a number of times equal the entire set. 

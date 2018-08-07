@@ -1,4 +1,7 @@
 Improving_complexity_version_one's big O  is set to n^2, as how the array is sorted is insertion sort.
 
-Improving_complexity_version_two is also technically n^2, but in most cases it will be n log n, as it's
+Improving_complexity_version_two's big O isn't constant, but the average Big O of bucket sort is O(n + k),
+where k is the number of buckets, but the worst case senario is n^2.
+
+Improving_complexity_version_three is also technically n^2, but in most cases it will be n log n, as it's
 using Quick Sort.

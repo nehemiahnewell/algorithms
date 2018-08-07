@@ -1,6 +1,6 @@
 
 # This method takes n arrays as input and combine them in sorted ascending  order
-def second_pass(*arrays)
+def third_pass(*arrays)
   combined_array = arrays.pop
   arrays.each do |array|
     array.each do |value|
@@ -63,7 +63,7 @@ def sort(collection, from=0, to=nil)
 end
 
 
-first = [1,3,5,7,9]
-second = [2,4,6,8]
+# first = [1,3,5,7,9]
+# second = [2,4,6,8]
 
-puts second_pass(first,second)
+# puts third_pass(first,second)

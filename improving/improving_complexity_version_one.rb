@@ -29,7 +29,7 @@ def first_pass(*arrays)
 end
 
 
-first = [1,3,5,7,9]
-second = [2,4,6,8]
+# first = [1,3,5,7,9]
+# second = [2,4,6,8]
 
-puts first_pass(first,second)
+# puts first_pass(first,second)
